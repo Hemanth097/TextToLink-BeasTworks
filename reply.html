@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>replies -BeastWorks</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			
+		}
+
+		.center {
+  			height: 100vh;
+  			background: radial-gradient(#f6ff94,#ffd6d6);
+		}
+
+		.center p {
+			margin: 0;
+  			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			transform: translate(-50%, -50%);
+  			font-size: 10vw;
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="center">
+		<p id="matter">hello</p>
+	</div>
+
+
+	<script>
+		var url_string = window.location;
+		var url = new URL(url_string);
+
+		var name = url.searchParams.get("name");
+		//console.log(url);
+		//console.log(url_string);
+		console.log(name);
+		document.getElementById("matter").innerHTML = name;
+	</script>
+
+</body>
+</html>
